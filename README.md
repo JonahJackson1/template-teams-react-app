@@ -1,10 +1,60 @@
-# Overview of the React with Fluent UI template
+# Jonah Readme
+
+## Teams tutorial
+
+### To start:
+
+Download the teams toolkit extension on VS Code
+Once downloaded, select "Create a New App" then pick whichever applies best
+
+Start development
+
+### Update variables / names:
+
+Go into appPackage/manifest.json and update
+
+- The developer name
+- icons
+- name (short and full)
+- description (short and full)
+- staticTabs > name
+- staticTabs > remove websiteURL
+
+Go into infra/azure.parameters.json and update
+
+- resourceBaseName to match your app name
+
+### Once finished with development:
+
+(THESE ARE THE FINAL STEPS BEFORE DEPLOYMENT)
+Click provision -- you will select a resource group
+
+- create a new resource group for your app under a micro-teams-app
+- select a region
+- confirm your account and provision
+  this will create the necessary production resources to deploy your app on (https://portal.azure.com).
+
+Click deploy - pretty sure this is where the app is zipped and built
+
+Click publish which sends the currently zipped file to (https://dev.teams.microsoft.com/home)
+
+Go to (https://dev.teams.microsoft.com/home) and find your app by the TEAMS_APP_ID in .env.dev
+
+Click publish in the top right - then publish to your org - to submit your app for review by an admin on (https://admin.teams.microsoft.com/dashboard)
+
+Once it is in this stage you can go to (https://admin.teams.microsoft.com/dashboard), find the app, and publish it.
+
+Probably missed some stuff in there but thats the gist. - Jonah
+
+# Teams Readme
+
+## Overview of the React with Fluent UI template
 
 This app showcases how to craft a visually appealing web page that can be embedded in Microsoft Teams, Outlook and the Microsoft 365 app with React and Fluent UI. The app also enhances the end-user experiences with built-in single sign-on and data from Microsoft Graph.
 
 This app has adopted [On-Behalf-Of flow](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to implement SSO, and uses Azure Function as middle-tier service, and make authenticated requests to call Graph from Azure Function.
 
-## Get started with the React with Fluent UI template
+### Get started with the React with Fluent UI template
 
 > **Prerequisites**
 >
@@ -13,7 +63,7 @@ This app has adopted [On-Behalf-Of flow](https://learn.microsoft.com/en-us/azure
 > - [Node.js](https://nodejs.org/), supported versions: 16, 18
 > - A [Microsoft 365 account for development](https://docs.microsoft.com/microsoftteams/platform/toolkit/accounts)
 > - [Set up your dev environment for extending Teams apps across Microsoft 365](https://aka.ms/teamsfx-m365-apps-prerequisites)
-> Please note that after you enrolled your developer tenant in Office 365 Target Release, it may take couple days for the enrollment to take effect.
+>   Please note that after you enrolled your developer tenant in Office 365 Target Release, it may take couple days for the enrollment to take effect.
 > - [Teams Toolkit Visual Studio Code Extension](https://aka.ms/teams-toolkit) version 5.0.0 and higher or [Teams Toolkit CLI](https://aka.ms/teamsfx-cli)
 
 1. First, select the Teams Toolkit icon on the left in the VS Code toolbar.
@@ -25,25 +75,25 @@ This app has adopted [On-Behalf-Of flow](https://learn.microsoft.com/en-us/azure
 
 ![Personal tab demo](https://user-images.githubusercontent.com/11220663/167839153-0aef6adc-450e-4b8c-a28f-7d27005d1093.png)
 
-## What's included in the template
+### What's included in the template
 
-| Folder       | Contents                                            |
-| - | - |
-| `.vscode`    | VSCode files for debugging                          |
-| `appPackage` | Templates for the Teams application manifest        |
-| `env`        | Environment files                                   |
-| `infra`      | Templates for provisioning Azure resources          |
-| `src`        | The source code for the Teams application |
+| Folder       | Contents                                     |
+| ------------ | -------------------------------------------- |
+| `.vscode`    | VSCode files for debugging                   |
+| `appPackage` | Templates for the Teams application manifest |
+| `env`        | Environment files                            |
+| `infra`      | Templates for provisioning Azure resources   |
+| `src`        | The source code for the Teams application    |
 
 The following are Teams Toolkit specific project files. You can [visit a complete guide on Github](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works.
 
-| File                                 | Contents                                           |
-| - | - |
-|`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions.|
-|`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-|`aad.manifest.json`|This file defines the configuration of Microsoft Entra app. This template will only provision [single tenant](https://learn.microsoft.com/azure/active-directory/develop/single-and-multi-tenant-apps#who-can-sign-in-to-your-app) Microsoft Entra app.|
+| File                 | Contents                                                                                                                                                                                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `teamsapp.yml`       | This is the main Teams Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.                                                                                                               |
+| `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging.                                                                                                                                                                   |
+| `aad.manifest.json`  | This file defines the configuration of Microsoft Entra app. This template will only provision [single tenant](https://learn.microsoft.com/azure/active-directory/develop/single-and-multi-tenant-apps#who-can-sign-in-to-your-app) Microsoft Entra app. |
 
-## Extend the React with Fluent UI template
+### Extend the React with Fluent UI template
 
 Following documentation will help you to extend the React with Fluent UI template.
 
