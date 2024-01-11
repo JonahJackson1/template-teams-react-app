@@ -44,7 +44,7 @@ Click publish in the top right - then publish to your org - to submit your app f
 
 Once it is in this stage you can go to (https://admin.teams.microsoft.com/dashboard), find the app, and publish it.
 
-Probably missed some stuff in there but thats the gist. - Jonah
+It can take up to 48 hrs for the apps to show up. Probably missed some stuff in there but thats the gist. - Jonah
 
 # Teams Readme
 
